@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pusat Bantuan — BimAcquire</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <span class="logo">B</span>
+          <span class="brand-name">BimAcquire</span>
+        </a>
+
+        <nav>
+          <a href="index.html">Belanja</a>
+          <a href="form.html" aria-current="page">Bantuan</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <p class="eyebrow">Pusat Bantuan</p>
+      <h1>Hubungi Kami</h1>
+      <p>Ada pertanyaan, kritik, atau saran? Isi form di bawah ini.</p>
+    </section>
+
+    <main>
+      <form id="form" novalidate>
+        <label for="nama">Nama</label>
+        <input
+          type="text"
+          id="nama"
+          placeholder="Nama lengkap"
+          aria-describedby="nama-error"
+        />
+        <small class="error" id="nama-error" aria-live="polite"></small>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="contoh: nama@email.com"
+          aria-describedby="email-error"
+        />
+        <small class="error" id="email-error" aria-live="polite"></small>
+
+        <label for="kategori">Kategori</label>
+        <select id="kategori" aria-describedby="kategori-error">
+          <option value="">-- Pilih kategori --</option>
+          <option value="Pertanyaan Produk">Pertanyaan Produk</option>
+          <option value="Pesanan dan Pengiriman">Pesanan dan Pengiriman</option>
+          <option value="Kritik dan Saran">Kritik dan Saran</option>
+        </select>
+        <small class="error" id="kategori-error" aria-live="polite"></small>
+
+        <label for="pesan">Pesan</label>
+        <textarea
+          id="pesan"
+          rows="5"
+          placeholder="Tulis pesan kamu di sini"
+          aria-describedby="pesan-error"
+        ></textarea>
+        <small class="error" id="pesan-error" aria-live="polite"></small>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+
+      <section id="hasil" hidden>
+        <h2>Pesan Terkirim</h2>
+        <p id="hasil-ucapan"></p>
+        <table>
+          <tr>
+            <td>Nama</td>
+            <td id="hasil-nama"></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td id="hasil-email"></td>
+          </tr>
+          <tr>
+            <td>Kategori</td>
+            <td id="hasil-kategori"></td>
+          </tr>
+          <tr>
+            <td>Pesan</td>
+            <td id="hasil-pesan"></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>&copy; 2026 BimAcquire</footer>
+
+    <script src="js/form.js"></script>
+  </body>
+</html>
