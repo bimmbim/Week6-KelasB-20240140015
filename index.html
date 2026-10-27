@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BimAcquire — Belanja Produk Pilihan</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">
+          <span class="logo">B</span>
+          <span class="brand-name">BimAcquire</span>
+        </a>
+
+        <form class="search" id="searchForm" role="search">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Cari produk di BimAcquire"
+            aria-label="Cari produk"
+          />
+          <button type="submit">Cari</button>
+        </form>
+
+        <nav>
+          <a href="index.html" aria-current="page">Belanja</a>
+          <a href="form.html">Bantuan</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <p class="eyebrow">Selamat datang</p>
+      <h1>Temukan Produk Favoritmu</h1>
+      <p>Cari dan jelajahi koleksi produk pilihan di BimAcquire.</p>
+    </section>
+
+    <main>
+      <div class="chips" id="categoryChips" aria-label="Filter kategori"></div>
+      <p class="count" id="resultCount" aria-live="polite"></p>
+
+      <div id="status">Memuat produk...</div>
+      <div class="grid" id="productGrid"></div>
+    </main>
+
+    <footer>&copy; 2026 BimAcquire</footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
