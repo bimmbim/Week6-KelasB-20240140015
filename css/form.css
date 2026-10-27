@@ -1,0 +1,143 @@
+form {
+  max-width: 520px;
+  margin: 8px auto 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  padding: 12px 14px;
+  border: 1.5px solid #cfcfcf;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a9a9a;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+select {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 16px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #000000;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333333;
+}
+
+.error {
+  min-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.error:not(:empty)::before {
+  content: "! ";
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px dashed #000000;
+  background: #f2f2f2;
+}
+
+#hasil {
+  max-width: 520px;
+  margin: 24px auto 0;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+#hasil h2 {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#hasil-ucapan {
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+#hasil table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#hasil td {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+#hasil td:first-child {
+  width: 100px;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  form {
+    margin: 8px 16px 0;
+    padding: 20px;
+  }
+  #hasil {
+    margin: 20px 16px 0;
+    padding: 20px;
+  }
+}
